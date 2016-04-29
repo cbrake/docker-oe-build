@@ -9,7 +9,7 @@ RUN apt-get update && \
 	echo "dash dash/sh boolean false" | debconf-set-selections && \
 	DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
-RUN useradd -ms /bin/bash build && \
+RUN useradd -u 1006 -g 1003 -ms /bin/bash build && \
 	usermod -aG sudo build
 	
 USER build
