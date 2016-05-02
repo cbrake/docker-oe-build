@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:wheezy
 MAINTAINER Cliff Brake <cbrake@bec-systems.com>
 
 RUN apt-get update && \
